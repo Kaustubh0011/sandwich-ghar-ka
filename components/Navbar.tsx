@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -18,123 +19,156 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-50">
-        <nav className="mx-auto mt-3 flex w-[95%] max-w-7xl items-center justify-between rounded-full border border-white/30 bg-white/80 backdrop-blur-xl px-4 py-3 md:px-6 md:py-4 shadow-xl">
+        <motion.nav
+          initial={{ y: -80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mt-4 flex w-[95%] max-w-7xl items-center justify-between rounded-full border border-orange-100 bg-white/80 backdrop-blur-2xl px-5 py-3 shadow-[0_10px_40px_rgba(255,140,0,0.15)]"
+        >
 
           {/* Logo */}
 
-          <a href="#" className="flex items-center gap-3">
-
+          <a
+            href="#"
+            className="flex items-center gap-3 transition-transform duration-300 hover:scale-105"
+          >
             <Image
               src="/logo/sandwich ghar ka logo.png"
               alt="Sandwich Ghar Ka"
-              width={56}
-              height={56}
-              className="w-10 h-10 md:w-14 md:h-14 object-contain"
+              width={60}
+              height={60}
               priority
+              className="object-contain"
             />
 
             <div>
-
-              <h1 className="text-lg md:text-xl font-bold text-orange-600">
+              <h1 className="text-xl font-bold text-orange-600">
                 Sandwich Ghar Ka
               </h1>
 
-              <p className="hidden md:block text-xs text-gray-600">
+              <p className="hidden md:block text-xs text-gray-500">
                 Homemade • Fresh • Hygienic
               </p>
-
             </div>
-
           </a>
 
           {/* Desktop Menu */}
 
-          <ul className="hidden lg:flex items-center gap-8">
-
+          <ul className="hidden lg:flex items-center gap-10">
             {links.map((link) => (
-
               <li key={link.name}>
-
                 <a
                   href={link.href}
-                  className="font-medium text-gray-700 transition hover:text-orange-500"
+                  className="group relative text-gray-700 font-medium transition duration-300 hover:text-orange-500"
                 >
                   {link.name}
+
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
-
               </li>
-
             ))}
-
           </ul>
 
           {/* Desktop Button */}
 
-          <a
+          <motion.a
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
             href="#menu"
-            className="hidden lg:flex items-center rounded-full bg-orange-500 px-6 py-3 text-white font-semibold transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+            className="hidden lg:flex rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-7 py-3 font-semibold text-white shadow-lg transition"
           >
             Order Now
-          </a>
+          </motion.a>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden"
+            className="lg:hidden rounded-full p-2 hover:bg-orange-100 transition"
+            aria-label="Toggle Menu"
           >
             {open ? (
-              <X size={30} />
+              <X size={28} />
             ) : (
-              <Menu size={30} />
+              <Menu size={28} />
             )}
           </button>
-
-        </nav>
+        </motion.nav>
 
         {/* Mobile Menu */}
 
-        {open && (
+        <AnimatePresence>
 
-          <div className="mx-4 mt-3 rounded-3xl bg-white p-6 shadow-2xl lg:hidden">
+          {open && (
 
-            <ul className="space-y-5">
-
-              {links.map((link) => (
-
-                <li key={link.name}>
-
-                  <a
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block text-lg font-medium text-gray-700 hover:text-orange-500"
-                  >
-                    {link.name}
-                  </a>
-
-                </li>
-
-              ))}
-
-            </ul>
-
-            <a
-              href="#menu"
-              onClick={() => setOpen(false)}
-              className="mt-6 block w-full rounded-full bg-orange-500 py-3 text-center text-white font-semibold transition hover:bg-orange-600"
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
+              className="mx-4 mt-4 rounded-3xl bg-white/90 backdrop-blur-xl border border-orange-100 p-6 shadow-2xl lg:hidden"
             >
-              Order Now
-            </a>
 
-          </div>
+              <ul className="space-y-5">
 
-        )}
+                {links.map((link) => (
+
+                  <li key={link.name}>
+
+                    <a
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="block rounded-xl px-3 py-2 text-lg font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
+                    >
+                      {link.name}
+                    </a>
+
+                  </li>
+
+                ))}
+
+              </ul>
+
+              <motion.a
+                whileHover={{
+                  scale: 1.03,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                href="#menu"
+                onClick={() => setOpen(false)}
+                className="mt-6 block w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 text-center font-semibold text-white shadow-lg"
+              >
+                Order Now
+              </motion.a>
+
+            </motion.div>
+
+          )}
+
+        </AnimatePresence>
 
       </header>
 
       {/* Spacer */}
 
-      <div className="h-24"></div>
+      <div className="h-28"></div>
     </>
   );
 }

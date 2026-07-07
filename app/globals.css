@@ -1,17 +1,24 @@
 @import "tailwindcss";
 
-:root{
-  --background:#fffaf5;
-  --foreground:#1f2937;
+/* ---------------- Root Colors ---------------- */
 
-  --primary:#ff7a00;
-  --secondary:#ffd166;
-  --green:#2ecc71;
+:root {
+  --background: #fffaf5;
+  --foreground: #1f2937;
 
-  --card:#ffffff;
+  --primary: #ff7a00;
+  --primary-dark: #ea580c;
 
-  --shadow:0 15px 45px rgba(0,0,0,.08);
+  --secondary: #ffd166;
+
+  --green: #22c55e;
+
+  --card: rgba(255,255,255,.75);
+
+  --shadow: 0 20px 60px rgba(0,0,0,.08);
 }
+
+/* ---------------- Reset ---------------- */
 
 *{
   margin:0;
@@ -26,9 +33,21 @@ html{
 body{
   background:var(--background);
   color:var(--foreground);
-  font-family:Arial, Helvetica, sans-serif;
+
+  font-family:
+  Inter,
+  ui-sans-serif,
+  system-ui,
+  sans-serif;
+
   overflow-x:hidden;
+
+  text-rendering:optimizeLegibility;
+
+  -webkit-font-smoothing:antialiased;
 }
+
+/* ---------------- Sections ---------------- */
 
 section{
   padding:90px 20px;
@@ -39,50 +58,128 @@ section{
   margin:auto;
 }
 
-.orange-gradient{
-  background:linear-gradient(
-      135deg,
-      #fff4e6,
-      #ffe5b4,
-      #fff9ef
-  );
+/* ---------------- Images ---------------- */
+
+img{
+  user-select:none;
+  -webkit-user-drag:none;
 }
+
+/* ---------------- Links ---------------- */
+
+a{
+  text-decoration:none;
+}
+
+/* ---------------- Buttons ---------------- */
+
+button{
+  cursor:pointer;
+}
+
+/* ---------------- Selection ---------------- */
+
+::selection{
+  background:#ff7a00;
+  color:white;
+}
+
+/* ---------------- Scrollbar ---------------- */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#fff5ed;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#ff7a00;
+  border-radius:100px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#ea580c;
+}
+
+/* ---------------- Glass ---------------- */
 
 .glass{
   backdrop-filter:blur(18px);
-  background:rgba(255,255,255,.6);
-  border:1px solid rgba(255,255,255,.3);
+  -webkit-backdrop-filter:blur(18px);
+
+  background:rgba(255,255,255,.70);
+
+  border:1px solid rgba(255,255,255,.35);
 }
+
+/* ---------------- Shadows ---------------- */
 
 .shadow-xl{
   box-shadow:var(--shadow);
 }
 
+/* ---------------- Buttons ---------------- */
+
 .btn-primary{
-  background:var(--primary);
+
+  background:linear-gradient(
+      90deg,
+      #ff7a00,
+      #ff5a00
+  );
+
   color:white;
-  border-radius:999px;
+
   padding:16px 34px;
+
+  border-radius:999px;
+
   font-weight:700;
-  transition:.3s;
+
+  transition:.35s;
+
+  box-shadow:
+  0 15px 35px rgba(255,122,0,.35);
 }
 
 .btn-primary:hover{
-  transform:translateY(-3px);
+
+  transform:
+  translateY(-4px)
+  scale(1.03);
+
 }
 
 .btn-outline{
+
   border:2px solid var(--primary);
+
   color:var(--primary);
-  border-radius:999px;
+
   padding:16px 34px;
-  transition:.3s;
+
+  border-radius:999px;
+
+  transition:.35s;
+
+  background:white;
 }
 
 .btn-outline:hover{
+
   background:var(--primary);
+
   color:white;
+
+  transform:
+  translateY(-4px);
+
 }
+
+/* ---------------- Hero Gradient ---------------- */
+
 @keyframes gradientMove{
 
 0%{
@@ -103,14 +200,108 @@ background-position:0% 50%;
 
 background:linear-gradient(
 135deg,
-#fff8f0,
-#fff3d6,
-#ffe2c2,
-#fff8f0
+#fffdf8,
+#fff3e5,
+#ffe8d2,
+#fff9f3,
+#fffdf8
 );
 
 background-size:400% 400%;
 
-animation:gradientMove 12s ease infinite;
+animation:gradientMove 15s ease infinite;
+
+}
+
+/* ---------------- Floating Animation ---------------- */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.float{
+animation:float 5s ease-in-out infinite;
+}
+
+/* ---------------- Fade Animation ---------------- */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.fade-up{
+animation:fadeUp .8s ease forwards;
+}
+
+/* ---------------- Pulse Glow ---------------- */
+
+@keyframes glow{
+
+0%{
+box-shadow:0 0 0 rgba(255,122,0,.15);
+}
+
+50%{
+box-shadow:0 0 35px rgba(255,122,0,.35);
+}
+
+100%{
+box-shadow:0 0 0 rgba(255,122,0,.15);
+}
+
+}
+
+.glow{
+animation:glow 3s infinite;
+}
+
+/* ---------------- Hover Cards ---------------- */
+
+.hover-card{
+
+transition:
+transform .35s,
+box-shadow .35s;
+
+}
+
+.hover-card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 30px 70px rgba(255,122,0,.18);
+
+}
+
+/* ---------------- Loading ---------------- */
+
+.loading{
+
+animation:
+gradientMove 4s linear infinite;
 
 }

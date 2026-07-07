@@ -1,20 +1,28 @@
-import Reviews from "@/components/Reviews";
+"use client";
+
 import Navbar from "@/components/Navbar";
-import Scene from "@/three/Scene";
-import Features from "@/components/Features";
+import Hero from "@/components/Hero";
 import Menu from "@/components/Menu";
 import About from "@/components/About";
+import Reviews from "@/components/Reviews";
+
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Scene />
-      <Features />
-      <Menu />
-      <About />
-      <Navbar />
-      <Reviews />
-    </main>
+    
+    
+      <main className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-yellow-50">
+        <Navbar />
+
+        <Hero />
+
+        <Menu />
+
+        <About />
+
+        <Reviews />
+
+      </main>
+    
   );
 }

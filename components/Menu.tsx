@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { menu } from "@/data/menu";
 import FoodModal from "./FoodModal";
-
-const FoodModalAny = FoodModal as any;
 
 const categories = [
   "All",
@@ -43,8 +42,12 @@ export default function Menu() {
 
         {/* Search */}
 
-        <div className="mt-10 max-w-xl mx-auto relative">
-
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-10 max-w-xl mx-auto relative"
+        >
           <Search
             className="absolute left-4 top-4 text-gray-400"
             size={20}
@@ -57,8 +60,7 @@ export default function Menu() {
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-full border border-orange-200 py-4 pl-12 pr-5 outline-none focus:ring-2 focus:ring-orange-400"
           />
-
-        </div>
+        </motion.div>
 
         {/* Categories */}
 
@@ -100,11 +102,11 @@ selectedCategory==="All"
 
 )
 
-.filter(item=>
-
-item.name.toLowerCase().includes(search.toLowerCase())
-
-)
+    .filter((item) => {
+      const q = search.trim().toLowerCase();
+      if (!q) return true;
+      return (item.name || "").toLowerCase().includes(q);
+    })
 
 .map((item) => (
   <div
@@ -185,7 +187,7 @@ item.name.toLowerCase().includes(search.toLowerCase())
       </div>
       {/* Food Modal */}
       {openModal && selectedFood && (
-        <FoodModalAny
+        <FoodModal
           open={openModal}
           onClose={() => setOpenModal(false)}
           item={selectedFood}
