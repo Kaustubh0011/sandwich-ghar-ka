@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -7,9 +8,9 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-yellow-100 min-h-screen flex items-center">
 
       {/* Background Blur */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-orange-300/30 blur-3xl"></div>
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-orange-300/30 blur-2xl"></div>
 
-      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-yellow-300/30 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-yellow-300/30 blur-2xl"></div>
 
       <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
 
@@ -51,13 +52,27 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-5 mt-10">
 
-              <button className="bg-orange-500 hover:bg-orange-600 transition text-white px-8 py-4 rounded-full font-semibold">
+              <button
+  onClick={() =>
+    document
+      .getElementById("menu")
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+  className="bg-orange-500 hover:bg-orange-600 transition text-white px-8 py-4 rounded-full font-semibold"
+>
 
                 Order Now
 
               </button>
 
-              <button className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white transition text-orange-500 px-8 py-4 rounded-full font-semibold">
+              <button
+  onClick={() =>
+    document
+      .getElementById("menu")
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+  className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white transition text-orange-500 px-8 py-4 rounded-full font-semibold"
+>
 
                 Explore Menu
 
@@ -123,30 +138,37 @@ export default function Hero() {
 
           {/* RIGHT */}
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative flex justify-center"
-          >
+<motion.div
+  initial={{ opacity: 0, scale: 0.7 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative flex justify-center items-center"
+>
 
-            <div className="absolute w-[500px] h-[500px] rounded-full bg-orange-300/30 blur-3xl"></div>
+  <div className="absolute w-[420px] h-[420px] rounded-full bg-orange-300/20 blur-2xl"></div>
 
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-              }}
-            >
+  <motion.div
+    animate={{
+      y: [0, -15, 0],
+      rotate: [0, 2, 0, -2, 0],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  >
+    <Image
+      src="/images/hero/hero-sandwich.png"
+      alt="Fresh Sandwich"
+      width={650}
+      height={650}
+      priority
+      className="drop-shadow-2xl select-none"
+    />
+  </motion.div>
 
-              
-
-            </motion.div>
-
-          </motion.div>
+</motion.div>
 
         </div>
 
