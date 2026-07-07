@@ -174,7 +174,7 @@ export const menu: MenuItem[] = [
   description: "Classic masala Maggi noodles.",
   price: 99,
   serves: "500 ml • Serves 1-2",
-  image: "/images/menu/plain maggi.jpg",
+  image: "/images/menu/Plain Maggi.jpg",
 
   zomatoLink: "https://zomato.onelink.me/xqzv/y8scjakn"
 },
@@ -303,7 +303,7 @@ export const menu: MenuItem[] = [
     "Traditional blend of curd, water, roasted cumin and black salt.",
   price: 89,
   serves: "350 ml • Serves 1-2",
-  image: "/images/menu/buttermilk.jpg",
+  image: "/images/menu/Buttermilk.jpg",
 
   zomatoLink: "https://zomato.onelink.me/xqzv/kvpzwaje"
 },
