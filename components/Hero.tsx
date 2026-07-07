@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-yellow-100 min-h-screen flex items-center">
+    <section className="relative overflow-hidden bg-[#FFF9F2] min-h-screen flex items-center">
 
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -16,11 +16,11 @@ export default function Hero() {
             rotate: [0, 180, 360],
           }}
           transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-orange-300/20 blur-3xl"
+    duration:6,
+    repeat:Infinity,
+    ease:"easeInOut"
+}}
+          className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-orange-300/20 blur-xl"
         />
 
         <motion.div
@@ -29,11 +29,11 @@ export default function Hero() {
             rotate: [360, 180, 0],
           }}
           transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute -bottom-52 -right-52 w-[600px] h-[600px] rounded-full bg-yellow-300/20 blur-3xl"
+    duration:6,
+    repeat:Infinity,
+    ease:"easeInOut"
+}}
+          className="absolute -bottom-52 -right-52 w-[600px] h-[600px] rounded-full bg-yellow-300/20 blur-xl"
         />
 
       </div>
@@ -131,31 +131,57 @@ export default function Hero() {
 
             {/* Statistics */}
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="mt-14 grid grid-cols-3 gap-8"
-            >
+           {/* Statistics */}
 
-              <div>
-                <h2 className="text-3xl font-bold text-orange-500">500+</h2>
-                <p className="text-gray-600">Happy Customers</p>
-              </div>
+<div className="grid grid-cols-3 gap-8 mt-14">
 
-              <div>
-                <h2 className="text-3xl font-bold text-orange-500">100%</h2>
-                <p className="text-gray-600">Fresh Food</p>
-              </div>
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <h2 className="text-3xl font-bold text-orange-500">
+      500+
+    </h2>
 
-              <div>
-                <h2 className="text-3xl font-bold text-orange-500">5★</h2>
-                <p className="text-gray-600">Rating</p>
-              </div>
+    <p className="text-gray-600">
+      Happy Customers
+    </p>
+  </motion.div>
 
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+  >
+    <h2 className="text-3xl font-bold text-orange-500">
+      100%
+    </h2>
+
+    <p className="text-gray-600">
+      Fresh Food
+    </p>
+  </motion.div>
+
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    <h2 className="text-3xl font-bold text-orange-500">
+      5★
+    </h2>
+
+    <p className="text-gray-600">
+      Rating
+    </p>
+  </motion.div>
+
+</div>
             </motion.div>
-
-          </motion.div>
 
           {/* RIGHT SIDE */}
 
@@ -192,14 +218,13 @@ export default function Hero() {
 
             <motion.div
               animate={{
-                y: [0, -20, 0],
-                rotate: [0, 2, 0, -2, 0],
-              }}
+    y: [0, -8, 0],
+}}
               transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+}}
             >
 
               <Image

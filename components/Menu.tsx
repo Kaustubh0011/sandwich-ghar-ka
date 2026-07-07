@@ -111,7 +111,7 @@ selectedCategory==="All"
 .map((item) => (
   <div
     key={item.id}
-   className="group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl transition-all duration-500 hover:-translate-y-4 hover:rotate-[0.5deg] hover:shadow-[0_30px_80px_rgba(255,120,0,0.25)]"
+   className="group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[0.5deg] hover:shadow-[0_30px_80px_rgba(255,120,0,0.25)]"
     onClick={() => {
       setSelectedFood(item);
       setOpenModal(true);
@@ -123,7 +123,7 @@ selectedCategory==="All"
   alt={item.name}
   fill
   sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-  className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+  className="object-cover transition-all duration-700 group-hover:scale-105"
 />  
 <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
@@ -173,7 +173,7 @@ selectedCategory==="All"
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="mt-auto block w-full rounded-xl bg-gradient-to-r from-orange-500 to-red-500 py-3 text-center font-semibold text-white transition-all duration-500 hover:scale-[1.03] hover:shadow-xl hover:shadow-orange-300"
+        className="mt-auto block w-full rounded-xl bg-gradient-to-r from-orange-500 to-red-500 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-orange-300"
       >
         Order Now
       </a>

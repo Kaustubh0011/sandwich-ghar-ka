@@ -63,7 +63,7 @@ export default function Navbar() {
                 >
                   {link.name}
 
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-colors duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             ))}
