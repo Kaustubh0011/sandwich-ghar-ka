@@ -1,31 +1,15 @@
-@keyframes gradientMove{
+@import "tailwindcss";
 
-0%{
-background-position:0% 50%;
+html {
+  scroll-behavior: smooth;
 }
 
-50%{
-background-position:100% 50%;
+body {
+  background: #fffaf5;
+  color: #1f2937;
+  overflow-x: hidden;
 }
 
-100%{
-background-position:0% 50%;
-}
-
-}
-
-.hero-bg{
-
-background:linear-gradient(
-135deg,
-#fff8f0,
-#fff3d6,
-#ffe2c2,
-#fff8f0
-);
-
-background-size:400% 400%;
-
-animation:gradientMove 12s ease infinite;
-
+* {
+  box-sizing: border-box;
 }

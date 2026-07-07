@@ -19,7 +19,7 @@ export default function About() {
         >
 
           <h2 className="text-center text-5xl font-black">
-            Meet The <span className="text-orange-500">Founder</span>
+            Meet The <span className="text-orange-500">Co-Founder</span>
           </h2>
 
           <p className="text-center text-gray-600 mt-5 max-w-2xl mx-auto">
@@ -40,17 +40,20 @@ export default function About() {
             viewport={{ once: true }}
           >
 
-            <div className="relative w-full h-[600px] rounded-[40px] overflow-hidden shadow-2xl">
+            <div className="flex justify-center">
+  <div className="relative">
+    <div className="absolute inset-0 rounded-full bg-orange-200 blur-3xl opacity-40"></div>
 
-              <Image
-                src="/founder.jpg"
-                alt="Founder Jyoti"
-                fill
-                className="object-cover"
-                sizes="(max-width:768px)100vw,50vw"
-              />
-
-            </div>
+    <Image
+      src="/images/Co-Founder/Co-Founder.png"
+      alt="Co-Founder"
+      width={350}
+      height={350}
+      priority
+      className="relative rounded-full border-8 border-white shadow-2xl object-cover"
+    />
+  </div>
+</div>
 
           </motion.div>
 
@@ -63,6 +66,10 @@ export default function About() {
             viewport={{ once: true }}
           >
 
+            <span className="inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-2 text-sm font-bold text-white shadow-lg">
+            👑 Co-Founder
+            </span>
+            
             <span className="bg-orange-100 text-orange-600 px-5 py-2 rounded-full font-semibold">
               Student Entrepreneur
             </span>

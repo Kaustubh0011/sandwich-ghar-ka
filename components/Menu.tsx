@@ -111,7 +111,7 @@ selectedCategory==="All"
 .map((item) => (
   <div
     key={item.id}
-   className="group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[0.5deg] hover:shadow-[0_30px_80px_rgba(255,120,0,0.25)]"
+    className="group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[0.5deg] hover:shadow-[0_30px_80px_rgba(255,120,0,0.25)]"
     onClick={() => {
       setSelectedFood(item);
       setOpenModal(true);
@@ -121,11 +121,11 @@ selectedCategory==="All"
       <Image
   src={item.image}
   alt={item.name}
-  fill
-  sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-  className="object-cover transition-all duration-700 group-hover:scale-105"
-/>  
-<div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+  width={500}
+  height={350}
+  className="h-56 sm:h-60 lg:h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+/>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
 
       {item.originalPrice && (
         <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -143,28 +143,21 @@ selectedCategory==="All"
     <div className="flex flex-col flex-1 p-6">
       <div className="flex justify-between items-center">
         <h3 className="text-xl md:text-2xl font-bold transition-colors duration-300 group-hover:text-orange-500">{item.name}</h3>
-
-        {item.bestseller && (
-          <span className="rounded-full bg-red-500 px-3 py-1 text-xs font-semibold text-white">
-            Best Seller
-          </span>
-        )}
       </div>
 
       <p className="mt-4 flex-grow text-gray-600">{item.description}</p>
 
       <div className="mt-4">
-  <span className="text-orange-500 text-3xl font-bold transition-transform duration-500 group-hover:scale-110">
-    ₹{item.price}
-  </span>
+        <span className="text-orange-500 text-3xl font-bold transition-transform duration-500 group-hover:scale-110">
+          ₹{item.price}
+        </span>
 
-  {item.originalPrice && (
-    <span className="ml-3 line-through text-gray-400">
-      ₹{item.originalPrice}
-    </span>
-  )}
-</div>
-      
+        {item.originalPrice && (
+          <span className="ml-3 line-through text-gray-400">
+            ₹{item.originalPrice}
+          </span>
+        )}
+      </div>
 
       <p className="text-sm text-gray-500 mt-3">{item.serves}</p>
 
