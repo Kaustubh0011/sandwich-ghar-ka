@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#FFF9F2] min-h-screen flex items-center">
-
+    <section className="hero-bg relative overflow-hidden min-h-screen flex items-center">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
 

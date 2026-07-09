@@ -13,3 +13,163 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* ===========================
+   Premium Floating Glow
+=========================== */
+
+@keyframes floatGlow1 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(60px, 40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes floatGlow2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-70px, 30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes floatGlow3 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(40px, -50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.floating-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #fffdf9,
+    #fff8ef,
+    #fffdf9
+  );
+}
+
+.floating-bg::before,
+.floating-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+}
+
+.floating-bg::before {
+  width: 420px;
+  height: 420px;
+  background: rgba(255, 165, 0, 0.16);
+  top: 8%;
+  left: -120px;
+  animation: floatGlow1 16s ease-in-out infinite;
+}
+
+.floating-bg::after {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 210, 80, 0.14);
+  bottom: -150px;
+  right: -120px;
+  animation: floatGlow2 18s ease-in-out infinite;
+}
+
+.glow-circle {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 9999px;
+  background: rgba(255, 140, 0, 0.12);
+  filter: blur(100px);
+  animation: floatGlow3 20s ease-in-out infinite;
+}
+.hero-bg{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #fffdf8,
+    #fff7eb,
+    #fff4dc
+  );
+}
+
+.hero-bg::before{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:#ff9d4d;
+  opacity:.12;
+  filter:blur(120px);
+
+  top:-120px;
+  left:-120px;
+
+  animation:floatOne 8s ease-in-out infinite;
+}
+
+.hero-bg::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  border-radius:50%;
+  background:#ffd54f;
+  opacity:.12;
+  filter:blur(100px);
+
+  right:-80px;
+  bottom:-80px;
+
+  animation:floatTwo 10s ease-in-out infinite;
+}
+
+@keyframes floatOne{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+@keyframes floatTwo{
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
