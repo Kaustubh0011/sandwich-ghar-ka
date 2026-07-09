@@ -14,9 +14,6 @@ export interface MenuItem {
 
 export const menu: MenuItem[] = [
 
-  // =========================
-  // PIZZAS
-  // =========================
 
   {
     id: 1,
@@ -28,6 +25,8 @@ export const menu: MenuItem[] = [
     serves: "Serves 1-2",
     image: "/images/menu/Paneer Tikka Pizza.jpg",
     bestseller: true,
+
+    zomatoLink: "https://zomato.onelink.me/xqzv/nzccq8g3"
   },
 
   {
@@ -40,6 +39,7 @@ export const menu: MenuItem[] = [
     originalPrice: 299,
     serves: "Serves 1-2",
     image: "/images/menu/Veg Cheese Pizza.jpg",
+    zomatoLink: "https://zomato.onelink.me/xqzv/usxi9xhq"
   },
 
   {
@@ -52,11 +52,9 @@ export const menu: MenuItem[] = [
     originalPrice: 329,
     serves: "Serves 1-2",
     image: "/images/menu/Margherita Pizza.jpg",
-  },
 
-  // =========================
-// SANDWICHES
-// =========================
+    zomatoLink: "https://zomato.onelink.me/xqzv/39c2ntu7"
+  },
 
 {
   id: 4,
@@ -64,11 +62,11 @@ export const menu: MenuItem[] = [
   name: "Veg Sandwich",
   description:
     "Fresh cucumber, onion, tomato, capsicum, butter, homemade green chutney and chaat masala on jumbo bread.",
-  price: 95,
+    price: 95,
   serves: "Serves 1",
   image: "/images/menu/Veg Sandwich.jpg",
 
-  zomatoLink: "https://zomato.onelink.me/xqzv/jqv73t3g"
+
 },
 
 {
@@ -163,9 +161,6 @@ export const menu: MenuItem[] = [
   zomatoLink: "https://zomato.onelink.me/xqzv/k1nl72f1"
 },
 
-// =========================
-// MAGGI, SNACKS & BREADS
-// =========================
 
 {
   id: 12,
@@ -291,9 +286,6 @@ export const menu: MenuItem[] = [
   zomatoLink: "https://zomato.onelink.me/xqzv/u92x22bq"
 },
 
-// =========================
-// DRINKS
-// =========================
 
 {
   id: 21,
@@ -364,10 +356,6 @@ export const menu: MenuItem[] = [
 
   zomatoLink: "https://zomato.onelink.me/xqzv/ytp4vid6"
 },
-
-// =========================
-// COMBOS
-// =========================
 
 {
   id: 26,

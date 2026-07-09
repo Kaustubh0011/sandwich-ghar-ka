@@ -23,8 +23,8 @@ export default function About() {
           </h2>
 
           <p className="text-center text-gray-600 mt-5 max-w-2xl mx-auto">
-            A passionate student entrepreneur serving fresh homemade food
-            with love, quality and hygiene.
+            <strong>A passionate student entrepreneur serving fresh homemade food
+            with love, quality and hygiene.</strong>
           </p>
 
         </motion.div>
@@ -79,7 +79,7 @@ export default function About() {
             </h3>
 
             <p className="mt-8 text-gray-700 leading-8 text-lg">
-              I'm a TYB.Com student at KES Shroff College, Mumbai.
+              I'm a TYB.Com student at <strong>KES Shroff College, Mumbai.</strong> 
               Along with pursuing my degree, I started
               <strong> Paratha Ghar Ka </strong>
               and
@@ -89,15 +89,15 @@ export default function About() {
             </p>
 
             <p className="mt-6 text-gray-700 leading-8 text-lg">
-              Before starting this journey, I completed professional food
-              training to learn proper hygiene, preparation techniques and
-              quality standards.
+              Before starting this journey, I completed <strong> professional food
+              training </strong> to learn proper <strong>hygiene, preparation techniques and
+              quality standards.</strong>
             </p>
 
-            <p className="mt-6 text-gray-700 leading-8 text-lg">
+            <p className="mt-6 text-gray-700 leading-8 texts-lg">
               Every order motivates me to work harder and continue growing.
-              Your support means more than just a purchase—it helps turn my
-              dream into reality.
+              Your support means more than just a purchase
+              —it helps turn dream into reality.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-6">
