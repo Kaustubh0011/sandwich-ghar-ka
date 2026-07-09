@@ -33,7 +33,17 @@ export default function Menu() {
         {/* Heading */}
 
         <h2 className="text-5xl font-bold text-center">
-          Our <span className="text-orange-500">Menu</span>
+          Our <span
+  className="
+    bg-gradient-to-r
+    from-orange-500
+    to-yellow-500
+    bg-clip-text
+    text-transparent
+  "
+>
+  Menu
+</span>
         </h2>
 
         <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -111,7 +121,24 @@ selectedCategory==="All"
 .map((item) => (
   <div
     key={item.id}
-    className="group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:rotate-[0.5deg] hover:shadow-[0_30px_80px_rgba(255,120,0,0.25)]"
+    className="
+group
+relative
+flex
+h-full
+flex-col
+overflow-hidden
+rounded-3xl
+border
+border-white/40
+bg-white/60
+backdrop-blur-xl
+shadow-xl
+transition
+duration-300
+hover:-translate-y-2
+hover:shadow-2xl
+"
     onClick={() => {
       setSelectedFood(item);
       setOpenModal(true);

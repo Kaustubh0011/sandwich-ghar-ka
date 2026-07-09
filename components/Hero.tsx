@@ -6,34 +6,12 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="hero-bg relative overflow-hidden min-h-screen flex items-center">
+      <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle,#ff7a00_1px,transparent_1px)] [background-size:40px_40px]"></div>
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
 
-        <motion.div
-          animate={{
-            scale: [1, 1.15, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-    duration:6,
-    repeat:Infinity,
-    ease:"easeInOut"
-}}
-          className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-orange-300/20 blur-xl"
-        />
-
-        <motion.div
-          animate={{
-            scale: [1.1, 1, 1.1],
-            rotate: [360, 180, 0],
-          }}
-          transition={{
-    duration:6,
-    repeat:Infinity,
-    ease:"easeInOut"
-}}
-          className="absolute -bottom-52 -right-52 w-[600px] h-[600px] rounded-full bg-yellow-300/20 blur-xl"
-        />
+       <div className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-orange-300/20 blur-xl"></div>
+       <div className="absolute -bottom-52 -right-52 w-[600px] h-[600px] rounded-full bg-yellow-300/20 blur-xl"></div>
 
       </div>
 
@@ -69,7 +47,13 @@ export default function Hero() {
               className="mt-8 text-5xl md:text-6xl lg:text-7xl font-black leading-tight"
             >
               Fresh
-              <span className="text-orange-500"> Sandwiches</span>
+              <span className="
+bg-gradient-to-r
+from-orange-500
+to-yellow-500
+bg-clip-text
+text-transparent
+"> Sandwiches</span>
               <br />
               Made With ❤️
             </motion.h1>
@@ -190,37 +174,13 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className="relative flex justify-center items-center"
           >
-
+            <div className="absolute w-[450px] h-[450px] rounded-full bg-orange-100/40 blur-3xl"></div>
             <motion.div
               animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute w-[430px] h-[430px] rounded-full border border-orange-200"
-            />
-
-            <motion.div
-              animate={{
-                rotate: -360,
-              }}
-              transition={{
-                duration: 60,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute w-[520px] h-[520px] rounded-full border border-yellow-200"
-            />
-
-            <motion.div
-              animate={{
-    y: [0, -8, 0],
+    y: [0, -5, 0],
 }}
               transition={{
-    duration: 6,
+    duration: 8,
     repeat: Infinity,
     ease: "easeInOut",
 }}
@@ -232,10 +192,64 @@ export default function Hero() {
                 width={650}
                 height={650}
                 priority
-                className="drop-shadow-[0_30px_60px_rgba(255,120,0,0.35)] select-none"
+                className="w-full h-auto max-w-[650px] drop-shadow-[0_30px_60px_rgba(255,120,0,0.35)] select-none"
               />
 
             </motion.div>
+            {/* Floating Sandwich Icon */}
+<motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute top-8 left-10 text-4xl"
+>
+  🥪
+</motion.div>
+
+{/* Floating Tomato */}
+<motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+    delay: 1,
+  }}
+  className="absolute top-20 right-10 text-3xl"
+>
+  🍅
+</motion.div>
+
+{/* Floating Cheese */}
+<motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+    delay: 2,
+  }}
+  className="absolute bottom-16 left-6 text-3xl"
+>
+  🧀
+</motion.div>
+
+{/* Floating Lettuce */}
+<motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+    delay: 3,
+  }}
+  className="absolute bottom-10 right-12 text-3xl"
+>
+  🥬
+</motion.div>
 
           </motion.div>
 

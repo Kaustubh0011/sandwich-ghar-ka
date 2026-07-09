@@ -75,7 +75,13 @@ export default function About() {
             </span>
 
             <h3 className="text-5xl font-black mt-6">
-              Hi, I'm <span className="text-orange-500">Jyoti</span>
+              Hi, I'm <span className="
+bg-gradient-to-r
+from-orange-500
+to-yellow-500
+bg-clip-text
+text-transparent
+">Jyoti</span>
             </h3>
 
             <p className="mt-8 text-gray-700 leading-8 text-lg">
