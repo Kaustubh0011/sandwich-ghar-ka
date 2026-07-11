@@ -23,7 +23,7 @@ export default function Navbar() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mt-4 flex w-[95%] max-w-7xl items-center justify-between rounded-full border border-orange-100 bg-white/80 backdrop-blur-2xl px-5 py-3 shadow-[0_10px_40px_rgba(255,140,0,0.15)]"
+          className="mx-auto mt-4 flex w-[95%] max-w-7xl items-center justify-between rounded-full border border-emerald-100 bg-white/80 backdrop-blur-2xl px-5 py-3 shadow-[0_10px_40px_rgba(255,140,0,0.15)]"
         >
 
           {/* Logo */}
@@ -42,7 +42,7 @@ export default function Navbar() {
             />
 
             <div>
-              <h1 className="text-xl font-bold text-orange-600">
+              <h1 className="text-xl font-bold text-emerald-700">
                 Sandwich Ghar Ka
               </h1>
 
@@ -59,11 +59,11 @@ export default function Navbar() {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="group relative text-gray-700 font-medium transition duration-300 hover:text-orange-500"
+                  className="group relative text-gray-700 font-medium transition duration-300 hover:text-emerald-600"
                 >
                   {link.name}
 s
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-colors duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-emerald-600 transition-colors duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             ))}
@@ -79,7 +79,7 @@ s
               scale: 0.95,
             }}
             href="#menu"
-            className="hidden lg:flex rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-7 py-3 font-semibold text-white shadow-lg transition"
+            className="hidden lg:flex rounded-full bg-gradient-to-r from-emerald-500 to-red-500 px-7 py-3 font-semibold text-white shadow-lg transition"
           >
             Order Now
           </motion.a>
@@ -88,7 +88,7 @@ s
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden rounded-full p-2 hover:bg-orange-100 transition"
+            className="lg:hidden rounded-full p-2 hover:bg-emerald-700 transition"
             aria-label="Toggle Menu"
           >
             {open ? (
@@ -121,7 +121,7 @@ s
               transition={{
                 duration: 0.3,
               }}
-              className="mx-4 mt-4 rounded-3xl bg-white/90 backdrop-blur-xl border border-orange-100 p-6 shadow-2xl lg:hidden"
+              className="mx-4 mt-4 rounded-3xl bg-white/90 backdrop-blur-xl border border-emerald-100 p-6 shadow-2xl lg:hidden"
             >
 
               <ul className="space-y-5">
@@ -133,7 +133,7 @@ s
                     <a
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="block rounded-xl px-3 py-2 text-lg font-medium text-gray-700 transition hover:bg-orange-50 hover:text-orange-500"
+                      className="block rounded-xl px-3 py-2 text-lg font-medium text-gray-700 transition hover:bg-emerald-700 hover:text-emerald-600"
                     >
                       {link.name}
                     </a>
@@ -153,7 +153,7 @@ s
                 }}
                 href="#menu"
                 onClick={() => setOpen(false)}
-                className="mt-6 block w-full rounded-full bg-gradient-to-r from-orange-500 to-red-500 py-3 text-center font-semibold text-white shadow-lg"
+                className="mt-6 block w-full rounded-full bg-gradient-to-r from-emerald-500 to-red-500 py-3 text-center font-semibold text-white shadow-lg"
               >
                 Order Now
               </motion.a>

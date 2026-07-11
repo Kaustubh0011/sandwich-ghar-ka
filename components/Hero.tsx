@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
 
-       <div className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-orange-300/20 blur-xl"></div>
+       <div className="absolute -top-52 -left-52 w-[650px] h-[650px] rounded-full bg-emerald-300/20 blur-xl"></div>
        <div className="absolute -bottom-52 -right-52 w-[600px] h-[600px] rounded-full bg-yellow-300/20 blur-xl"></div>
 
       </div>
@@ -35,7 +35,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="inline-block rounded-full bg-orange-100 px-5 py-2 font-semibold text-orange-600 shadow-md"
+              className="inline-block rounded-full bg-emerald-100 px-5 py-2 font-semibold text-emerald-700 shadow-md"
             >
               Homemade • Fresh • Hygienic
             </motion.span>
@@ -49,7 +49,7 @@ export default function Hero() {
               Fresh
               <span className="
 bg-gradient-to-r
-from-orange-500
+from-emerald-500
 to-yellow-500
 bg-clip-text
 text-transparent
@@ -88,7 +88,7 @@ text-transparent
                     .getElementById("menu")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-white shadow-xl transition hover:bg-orange-600"
+                className="rounded-full bg-emerald-600 px-8 py-4 font-semibold text-white shadow-xl transition hover:bg-emerald-700"
               >
                 Order Now
               </motion.button>
@@ -105,7 +105,7 @@ text-transparent
                     .getElementById("menu")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="rounded-full border-2 border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-white"
+                className="rounded-full border-2 border-emerald-600 px-8 py-4 font-semibold text-emerald-600 transition hover:bg-emerald-600 hover:text-white"
               >
                 Explore Menu
               </motion.button>
@@ -124,7 +124,7 @@ text-transparent
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
   >
-    <h2 className="text-3xl font-bold text-orange-500">
+    <h2 className="text-3xl font-bold text-emerald-600">
       500+
     </h2>
 
@@ -139,7 +139,7 @@ text-transparent
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
   >
-    <h2 className="text-3xl font-bold text-orange-500">
+    <h2 className="text-3xl font-bold text-emerald-600">
       100%
     </h2>
 
@@ -154,7 +154,7 @@ text-transparent
     viewport={{ once: true }}
     transition={{ duration: 1 }}
   >
-    <h2 className="text-3xl font-bold text-orange-500">
+    <h2 className="text-3xl font-bold text-emerald-600">
       5★
     </h2>
 
@@ -174,7 +174,7 @@ text-transparent
             transition={{ duration: 1 }}
             className="relative flex justify-center items-center"
           >
-            <div className="absolute w-[450px] h-[450px] rounded-full bg-orange-100/40 blur-3xl"></div>
+            <div className="absolute w-[450px] h-[450px] rounded-full bg-emerald-200/40 blur-3xl"></div>
             <motion.div
               animate={{
     y: [0, -5, 0],

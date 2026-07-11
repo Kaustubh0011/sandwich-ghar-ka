@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-gradient-to-br from-orange-50 via-white to-yellow-50"
+      className="py-24 bg-gradient-to-br from-emerald-50 via-white to-yellow-50"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -19,7 +19,7 @@ export default function About() {
         >
 
           <h2 className="text-center text-5xl font-black">
-            Meet The <span className="text-orange-500">Co-Founder</span>
+            Meet The <span className="text-emerald-600">Co-Founder</span>
           </h2>
 
           <p className="text-center text-gray-600 mt-5 max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export default function About() {
 
             <div className="flex justify-center">
   <div className="relative">
-    <div className="absolute inset-0 rounded-full bg-orange-200 blur-3xl opacity-40"></div>
+    <div className="absolute inset-0 rounded-full bg-emerald-200 blur-3xl opacity-40"></div>
 
     <Image
       src="/images/Co-Founder/Co-Founder.png"
@@ -66,18 +66,18 @@ export default function About() {
             viewport={{ once: true }}
           >
 
-            <span className="inline-flex items-center rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-5 py-2 text-sm font-bold text-white shadow-lg">
+            <span className="inline-flex items-center rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-2 text-sm font-bold text-white shadow-lg">
             👑 Co-Founder
             </span>
             
-            <span className="bg-orange-100 text-orange-600 px-5 py-2 rounded-full font-semibold">
+            <span className="bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full font-semibold">
               Student Entrepreneur
             </span>
 
             <h3 className="text-5xl font-black mt-6">
               Hi, I'm <span className="
 bg-gradient-to-r
-from-orange-500
+from-emerald-500
 to-yellow-500
 bg-clip-text
 text-transparent
@@ -109,14 +109,14 @@ text-transparent
             <div className="mt-10 grid grid-cols-2 gap-6">
 
               <div className="rounded-3xl bg-white p-6 shadow-lg">
-                <h4 className="text-3xl font-black text-orange-500">
+                <h4 className="text-3xl font-black text-emerald-600">
                   100%
                 </h4>
                 <p>Fresh Ingredients</p>
               </div>
 
               <div className="rounded-3xl bg-white p-6 shadow-lg">
-                <h4 className="text-3xl font-black text-orange-500">
+                <h4 className="text-3xl font-black text-emerald-600">
                   ❤️
                 </h4>
                 <p>Made with Love</p>

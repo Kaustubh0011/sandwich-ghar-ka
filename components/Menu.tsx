@@ -26,7 +26,7 @@ export default function Menu() {
   return (
     <section
       id="menu"
-      className="py-24 bg-gradient-to-b from-orange-50 to-white"
+      className="py-24 bg-gradient-to-b from-emerald-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -36,7 +36,7 @@ export default function Menu() {
           Our <span
   className="
     bg-gradient-to-r
-    from-orange-500
+    from-emerald-500
     to-yellow-500
     bg-clip-text
     text-transparent
@@ -68,7 +68,7 @@ export default function Menu() {
             placeholder="Search food..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-full border border-orange-200 py-4 pl-12 pr-5 outline-none focus:ring-2 focus:ring-orange-400"
+            className="w-full rounded-full border border-emerald-200 py-4 pl-12 pr-5 outline-none focus:ring-2 focus:ring-emerald-400"
           />
         </motion.div>
 
@@ -83,8 +83,8 @@ export default function Menu() {
               onClick={() => setSelectedCategory(cat)}
              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
   selectedCategory === cat
-    ? "bg-orange-500 text-white shadow-lg"
-    : "bg-white border border-orange-200 hover:bg-orange-100"
+    ? "bg-emerald-600 text-white shadow-lg"
+    : "bg-white border border-emerald-200 hover:bg-emerald-100"
 }`}
             >
               {cat}
@@ -169,13 +169,13 @@ hover:shadow-2xl
 
     <div className="flex flex-col flex-1 p-6">
       <div className="flex justify-between items-center">
-        <h3 className="text-xl md:text-2xl font-bold transition-colors duration-300 group-hover:text-orange-500">{item.name}</h3>
+        <h3 className="text-xl md:text-2xl font-bold transition-colors duration-300 group-hover:text-emerald-600">{item.name}</h3>
       </div>
 
       <p className="mt-4 flex-grow text-gray-600">{item.description}</p>
 
       <div className="mt-4">
-        <span className="text-orange-500 text-3xl font-bold transition-transform duration-500 group-hover:scale-110">
+        <span className="text-emerald-600 text-3xl font-bold transition-transform duration-500 group-hover:scale-110">
           ₹{item.price}
         </span>
 
@@ -193,7 +193,7 @@ hover:shadow-2xl
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="mt-auto block w-full rounded-xl bg-gradient-to-r from-orange-500 to-red-500 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-orange-300"
+        className="mt-auto block w-full rounded-xl bg-gradient-to-r from-emerald-500 to-red-500 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-emerald-300"
       >
         Order Now
       </a>
