@@ -164,6 +164,25 @@ text-transparent
   </motion.div>
 
 </div>
+<div className="mt-10 rounded-3xl border border-green-200 bg-white/80 backdrop-blur-xl p-6 shadow-xl">
+
+  <h3 className="text-xl font-bold text-green-700 mb-4">
+    🌿 Freshness Promise
+  </h3>
+
+  <div className="space-y-2 text-gray-700">
+
+    <p>✔ Made after every order</p>
+
+    <p>✔ No frozen vegetables</p>
+
+    <p>✔ Hygienically prepared</p>
+
+    <p>✔ Homemade chutney</p>
+
+  </div>
+
+</div>
             </motion.div>
 
           {/* RIGHT SIDE */}

@@ -162,7 +162,7 @@ hover:shadow-2xl
 
       {item.bestseller && (
         <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
-          ⭐ Bestseller
+          👑 Customer Favorite
         </div>
       )}
     </div>
@@ -193,7 +193,24 @@ hover:shadow-2xl
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="mt-auto block w-full rounded-xl bg-gradient-to-r from-emerald-500 to-red-500 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-emerald-300"
+        className="
+mt-auto
+block
+w-full
+rounded-xl
+bg-gradient-to-r
+from-green-500
+to-emerald-500
+py-3
+text-center
+font-semibold
+text-white
+transition
+duration-300
+hover:scale-105
+hover:shadow-2xl
+animate-pulse
+"
       >
         Order Now
       </a>
