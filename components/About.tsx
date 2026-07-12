@@ -19,7 +19,7 @@ export default function About() {
         >
 
           <h2 className="text-center text-5xl font-black">
-            Meet The <span className="text-emerald-600">Co-Founder</span>
+            Meet The <span className="text-emerald-600">Founder</span>
           </h2>
 
           <p className="text-center text-gray-600 mt-5 max-w-2xl mx-auto">
@@ -46,7 +46,7 @@ export default function About() {
 
     <Image
       src="/images/Co-Founder/Co-Founder.png"
-      alt="Co-Founder"
+      alt="Founder"
       width={350}
       height={350}
       priority
@@ -67,7 +67,7 @@ export default function About() {
           >
 
             <span className="inline-flex items-center rounded-full bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-2 text-sm font-bold text-white shadow-lg">
-            👑 Co-Founder
+            👑 Founder
             </span>
             
             <span className="bg-emerald-100 text-emerald-700 px-5 py-2 rounded-full font-semibold">
