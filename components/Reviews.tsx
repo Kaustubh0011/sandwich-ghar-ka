@@ -1,20 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Aarav",
-    text: "Fresh sandwiches with amazing taste. Definitely ordering again!",
+    name: "Kanan Patel",
+    food: "Aloo Slice Cheese Sandwich",
+    review:
+      "The food was worth it. the amount of cheese it had was perfect for someone like me who likes cheese.",
+    rating: 5,
+    helpful: 24,
+    time: "09 Jul, 09:32 AM",
   },
   {
-    name: "Priya",
-    text: "Very hygienic and delicious. The homemade chutney is fantastic.",
+    name: "Saniya",
+    food: "Veg Cheese grilled Sandwich",
+    review:
+      "Very tasty sandwich. Fresh ingredients aur perfect taste. Zarur fir oeder karungi.",
+    rating: 5,
+    helpful: 18,
+    time: "10 Jul, 08:27 AM",
   },
   {
-    name: "Rahul",
-    text: "Fast delivery and premium quality. Highly recommended!",
+    name: "Dipali Watkare",
+    food: "Aloo Paratha",
+    review:
+      "Excellent quality and quick delivery. Highly recommended.",
+    rating: 5,
+    helpful: 15,
+    time: "10 Jul, 05:09 PM",
+  },
+  {
+    name: "Ashish Pednekar",
+    food: "(2X)Aloo Paratha",
+    review:
+      "Homemade taste just like home. Soft parathas and delicious curd.",
+    rating: 5,
+    helpful: 20,
+    time: "10Jul, 11:08 PM",
+  },
+  {
+    name: "",
+    food: "KitKat Milkshake",
+    review:
+      "Creamy, thick and perfectly chilled. My favourite drink.",
+    rating: 5,
+    helpful: 13,
+    time: "Yesterday",
+  },
+  {
+    name: "Rohan D.",
+    food: "Veg Grilled Sandwich",
+    review:
+      "Beautiful presentation and excellent taste. Worth every rupee.",
+    rating: 5,
+    helpful: 17,
+    time: "Today",
   },
 ];
 
@@ -22,56 +63,122 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-24 bg-orange-50"
+      className="py-24 bg-gradient-to-b from-white to-green-50"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          initial={{opacity:0,y:40}}
+          whileInView={{opacity:1,y:0}}
+          viewport={{once:true}}
         >
+
           <h2 className="text-center text-5xl font-black">
-            Customer <span className="text-orange-500">Reviews</span>
+
+            Customer
+
+            <span className="bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
+
+              Reviews
+
+            </span>
+
           </h2>
 
-          <p className="text-center mt-4 text-gray-600">
-            Loved by our happy customers ❤️
+          <p className="text-center text-gray-600 mt-5">
+            Trusted by hundreds of happy customers.
           </p>
+
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-          {reviews.map((review, index) => (
+          {reviews.map((review,index)=>(
+
             <motion.div
+
               key={index}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-3xl shadow-xl p-8"
+
+              initial={{opacity:0,y:40}}
+
+              whileInView={{opacity:1,y:0}}
+
+              viewport={{once:true}}
+
+              transition={{delay:index*0.1}}
+
+              className="rounded-3xl bg-white/70 backdrop-blur-xl border border-white shadow-xl p-8 hover:-translate-y-2 transition-all duration-300"
+
             >
-              <div className="flex mb-4">
-                {[1,2,3,4,5].map((star) => (
-                  <Star
-                    key={star}
-                    size={20}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
+
+              <div className="flex justify-between">
+
+                <div className="text-yellow-500 text-xl">
+
+                  ⭐⭐⭐⭐⭐
+
+                </div>
+
+                <span className="text-sm text-gray-400">
+
+                  {review.time}
+
+                </span>
+
               </div>
 
-              <p className="text-gray-600 leading-7">
-                "{review.text}"
+              <p className="mt-6 text-gray-700 leading-7">
+
+                "{review.review}"
+
               </p>
 
-              <h3 className="mt-6 text-xl font-bold">
-                {review.name}
-              </h3>
+              <div className="mt-8">
+
+                <h3 className="font-bold text-lg">
+
+                  {review.name}
+
+                </h3>
+
+                <p className="text-green-600 font-medium">
+
+                  ✔ Verified Customer
+
+                </p>
+
+                <p className="text-gray-500 text-sm mt-1">
+
+                  Ordered: {review.food}
+
+                </p>
+
+              </div>
+
+              <div className="mt-6 flex justify-between text-sm">
+
+                <span>
+
+                  ❤️ {review.helpful} Helpful
+
+                </span>
+
+                <span className="font-semibold text-green-600">
+
+                  Recommend ✔
+
+                </span>
+
+              </div>
+
             </motion.div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
 }
