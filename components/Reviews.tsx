@@ -73,13 +73,13 @@ export default function Reviews() {
           viewport={{once:true}}
         >
 
-          <h2 className="text-center text-5xl font-black">
+          <h2 className="text-center text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
 
-            Customer
+            ⭐ What Our 
 
             <span className="bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
 
-              Reviews
+              Customers Say
 
             </span>
 
@@ -127,7 +127,7 @@ export default function Reviews() {
 
               </div>
 
-              <p className="mt-6 text-gray-700 leading-7">
+              <p className="mt-6 text-gray-700 text-lg leading-8">
 
                 "{review.review}"
 

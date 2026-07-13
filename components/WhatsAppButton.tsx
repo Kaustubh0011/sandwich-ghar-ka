@@ -8,8 +8,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       className="
       fixed
-      bottom-6
-      right-6
+      bottom-5 right-5 md:bottom-8 md:right-8
       z-50
       rounded-full
       bg-green-500
@@ -23,11 +22,11 @@ export default function WhatsAppButton() {
       group
       "
     >
-      <span className="font-semibold">
+      <span className="md:hidden">💬</span>
 
-        💬 Order on WhatsApp
-
-      </span>
+<span className="hidden md:inline">
+  💬 Order on WhatsApp
+</span>
 
       <div
         className="
