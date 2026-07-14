@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 export default function Hero() {
   return (
@@ -125,7 +126,13 @@ text-transparent
     transition={{ duration: 0.6 }}
   >
     <h2 className="text-3xl font-bold text-emerald-600">
-      500+
+      <CountUp
+  end={500}
+  duration={3}
+  enableScrollSpy
+  scrollSpyOnce
+/>
++
     </h2>
 
     <p className="text-gray-600">
@@ -140,7 +147,13 @@ text-transparent
     transition={{ duration: 0.8 }}
   >
     <h2 className="text-3xl font-bold text-emerald-600">
-      100%
+      <CountUp
+  end={100}
+  duration={3}
+  enableScrollSpy
+  scrollSpyOnce
+/>
+%
     </h2>
 
     <p className="text-gray-600">
@@ -155,7 +168,14 @@ text-transparent
     transition={{ duration: 1 }}
   >
     <h2 className="text-3xl font-bold text-emerald-600">
-      5★
+      <CountUp
+  end={5}
+  duration={3}
+  decimals={1}
+  enableScrollSpy
+  scrollSpyOnce
+/>
+★
     </h2>
 
     <p className="text-gray-600">
